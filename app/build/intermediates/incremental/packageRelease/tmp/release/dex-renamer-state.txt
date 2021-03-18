@@ -1,0 +1,4 @@
+#Thu Mar 18 23:05:57 CST 2021
+base.0=/Users/wyl/Documents/StudyDemo/Jiagu/app/build/intermediates/dex/release/mergeDexRelease/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
