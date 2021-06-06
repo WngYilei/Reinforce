@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin:'com.enjoy.jiagu'
-
+apply plugin:'com.xl.jiagu'
 jiagu{
     userName '18222240810'
     password 'xiaolei521'

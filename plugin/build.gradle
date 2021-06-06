@@ -1,23 +1,23 @@
 apply plugin: 'groovy'
-apply plugin: 'com.github.dcendents.android-maven'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.tools.build:gradle:3.5.2'
     implementation gradleApi()
+    compile 'org.javassist:javassist:3.20.0-GA'
 }
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
 
 apply plugin:'maven-publish'
-group='com.gitee.yileiwang:reinforce'
+
 publishing{
     publications{
         Jiagu(MavenPublication){
             from components.java  //要把源码生成的jar包上传
-            groupId 'com.enjoy'
+            groupId 'com.xl'
             artifactId "jiagu"
-            version "1.0"
+            version "1.4"
         }
     }
 }
