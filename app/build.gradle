@@ -1,11 +1,15 @@
 apply plugin: 'com.android.application'
-apply plugin:'com.xl.jiagu'
-jiagu{
+apply plugin: 'com.xl.jiagu'
+jiagu {
     userName ''
     password ''
     jiaguTools '/Users/wyl/Downloads/360jiagubao_mac/jiagu/jiagu.jar'
     uKey ''
     apiKey ''
+    vername '1'
+    isAtAll true
+    access_token ''
+    upload 'https://www.pgyer.com/UGwJ'
 }
 
 

@@ -40,7 +40,18 @@ class JiaguTask extends DefaultTask {
                     it.commandLine("curl", "-F", "file=@${file.absolutePath}", "-F", "uKey=${jiagu.uKey}", "-F", "_api_key=${jiagu.apiKey}", "https://www.pgyer.com/apiv1/app/upload")
                 }
             }
+        }
 
+        project.exec {
+            it.commandLine("curl", "https://oapi.dingtalk.com/robot/send?access_token=${jiagu.access_token}", "-H", "Content-Type: application/json", "-d", "{\n" +
+                    "    \"at\": {\n" +
+                    "       \"isAtAll\": ${jiagu.isAtAll}\n" +
+                    "    },\n" +
+                    "    \"text\": {\n" +
+                    "        \"content\":\"安卓APP${jiagu.vername}版本已经发布,发布地址${jiagu.upload}\"\n" +
+                    "    },\n" +
+                    "    \"msgtype\":\"text\"\n" +
+                    "}")
         }
 
 
