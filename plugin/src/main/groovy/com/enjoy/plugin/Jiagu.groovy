@@ -1,9 +1,27 @@
 package com.enjoy.plugin;
 
 class Jiagu {
-    String userName;
-    String password;
+    String userName
+    String password
     String jiaguTools
+    String uKey
+    String apiKey
+
+    String getuKey() {
+        return uKey
+    }
+
+    void setuKey(String uKey) {
+        this.uKey = uKey
+    }
+
+    String getApiKey() {
+        return apiKey
+    }
+
+    void setApiKey(String apiKey) {
+        this.apiKey = apiKey
+    }
 
     String getUserName() {
         return userName

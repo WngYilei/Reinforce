@@ -15,7 +15,6 @@ class JiaguPlugin implements Plugin<Project> {
             AppExtension android = project.extensions.android
             android.applicationVariants.all {
                 ApplicationVariant variant ->
-
                     SigningConfig signingConfig = variant.signingConfig
                     variant.outputs.all {
                         BaseVariantOutput output->

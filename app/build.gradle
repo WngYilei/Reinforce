@@ -4,6 +4,8 @@ jiagu{
     userName '18222240810'
     password 'xiaolei521'
     jiaguTools '/Users/wyl/Downloads/360jiagubao_mac/jiagu/jiagu.jar'
+    uKey 'f2df642bcfc90c79e4464f53db9beb39'
+    apiKey 'eb6b721fb2aec8d3a41c63eb17b7942c'
 }
 
 
