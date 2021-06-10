@@ -48,7 +48,7 @@ class JiaguTask extends DefaultTask {
                     "       \"isAtAll\": ${jiagu.isAtAll}\n" +
                     "    },\n" +
                     "    \"text\": {\n" +
-                    "        \"content\":\"安卓APP${jiagu.vername}版本已经发布,发布地址${jiagu.upload}\"\n" +
+                    "        \"content\":\"${jiagu.appname}-version:${jiagu.vername} 版本已经发布,发布地址${jiagu.upload}\"\n" +
                     "    },\n" +
                     "    \"msgtype\":\"text\"\n" +
                     "}")

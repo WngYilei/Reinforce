@@ -8,6 +8,15 @@ class Jiagu {
     String apiKey
 
     String vername
+    String appname
+
+    String getAppname() {
+        return appname
+    }
+
+    void setAppname(String appname) {
+        this.appname = appname
+    }
     boolean isAtAll
     String access_token
 
