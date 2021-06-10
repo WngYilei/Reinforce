@@ -4,12 +4,12 @@ jiagu {
     userName '18222240810'
     password 'xiaolei521'
     jiaguTools '/Users/wyl/Downloads/360jiagubao_mac/jiagu/jiagu.jar'
-    uKey ''
-    apiKey ''
+    uKey 'f2df642bcfc90c79e4464f53db9beb39'
+    apiKey 'eb6b721fb2aec8d3a41c63eb17b7942c'
     vername rootProject.ext.versionName
     appname '加固插件'
     isAtAll true
-    access_token ''
+    access_token '4a3bb8919577eea8e3af68d721dbb3831b6650279b9a7d97f5e8b25a5e7c4165'
     upload 'https://www.pgyer.com/UGwJ'
 }
 
