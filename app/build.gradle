@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.xl.jiagu'
+
 jiagu {
     userName '18222240810'
     password 'xiaolei521'
@@ -37,11 +38,38 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFlie = output.outputFile
+                    if (outputFlie != null && outputFlie.name.endsWith(".apk") && variant.buildType.name.equals("release")) {
+                        def fileName = "Jiagu_release.apk"
+                        outputFileName = fileName
+                    }
+                }
+            }
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFlie = output.outputFile
+                    if (outputFlie != null && outputFlie.name.endsWith(".apk") && variant.buildType.name.equals("debug")) {
+                        def fileName = "Jiagu_debug.apk"
+                        outputFileName = fileName
+                    }
+                }
+            }
         }
     }
 }
@@ -53,7 +81,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.gitee.yileiwang:xkit:1.0.2'
 }
 
 
