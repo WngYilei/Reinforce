@@ -6,7 +6,10 @@ buildscript {
         maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
         maven { url "https://jitpack.io" }
         google()
-        maven {url "http://47.97.251.64:8081/nexus/content/repositories/thirdparty/"}
+        maven {
+            allowInsecureProtocol = true
+            url "http://47.97.251.64:8081/nexus/content/repositories/thirdparty/"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
