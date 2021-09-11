@@ -7,7 +7,7 @@ buildscript {
         maven { url "https://jitpack.io" }
         google()
         maven {
-            allowInsecureProtocol = true
+//            allowInsecureProtocol = true
             url "http://47.97.251.64:8081/nexus/content/repositories/thirdparty/"
         }
     }
