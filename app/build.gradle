@@ -71,6 +71,15 @@ android {
             }
         }
     }
+    flavorDimensions 'channel'
+    productFlavors {
+        alpha {
+            dimension 'channel'
+        }
+        beta {
+            dimension 'channel'
+        }
+    }
 }
 
 dependencies {
