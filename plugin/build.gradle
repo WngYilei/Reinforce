@@ -3,7 +3,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.tools.build:gradle:3.5.2'
     implementation gradleApi()
-    compile 'org.javassist:javassist:3.20.0-GA'
+    implementation 'org.javassist:javassist:3.20.0-GA'
 }
 
 sourceCompatibility = "7"
