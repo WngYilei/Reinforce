@@ -10,6 +10,7 @@ import org.gradle.api.Project
 class JiaguPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
+
         Jiagu jiagu = project.extensions.create("jiagu", Jiagu)
         project.afterEvaluate {
             AppExtension android = project.extensions.android
@@ -17,7 +18,7 @@ class JiaguPlugin implements Plugin<Project> {
                 ApplicationVariant variant ->
                     SigningConfig signingConfig = variant.signingConfig
                     variant.outputs.all {
-                        BaseVariantOutput output->
+                        BaseVariantOutput output ->
                             File apk = output.outputFile
                             JiaguTask jiaguTask = project.tasks.create("jiagu${variant.baseName.capitalize()}", JiaguTask)
                             jiaguTask.jiagu = jiagu

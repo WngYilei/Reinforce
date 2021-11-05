@@ -1,16 +1,23 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.xl.jiagu'
 jiagu {
+//  加固相关 360加固
     userName '18222240810'
     password 'xiaolei521'
     jiaguTools '/Users/wyl/Downloads/360jiagubao_mac/jiagu/jiagu.jar'
-    uKey ''
-    apiKey ''
+//  蒲公英相关
+    uKey 'f2df642bcfc90c79e4464f53db9beb39'
+    apiKey 'eb6b721fb2aec8d3a41c63eb17b7942c'
+
+//  钉钉机器人相关
+    access_token '4a3bb8919577eea8e3af68d721dbb3831b6650279b9a7d97f5e8b25a5e7c4165'
+
+//  发送消息
+    upload 'https://www.pgyer.com/UGwJ'
     vername rootProject.ext.versionName
     appname '加固插件'
     isAtAll true
-    access_token ''
-    upload 'https://www.pgyer.com/UGwJ'
+    msg ''
 }
 
 
@@ -53,7 +60,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.gitee.yileiwang:xkit:1.0.2'
 }
 
 

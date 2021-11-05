@@ -1,24 +1,38 @@
 apply plugin: 'groovy'
+apply plugin:'maven'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.tools.build:gradle:3.5.2'
     implementation gradleApi()
-    compile 'org.javassist:javassist:3.20.0-GA'
+    implementation 'org.javassist:javassist:3.20.0-GA'
 }
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
 
-apply plugin:'maven-publish'
 
-publishing{
-    publications{
-        Jiagu(MavenPublication){
-            from components.java  //要把源码生成的jar包上传
-            groupId 'com.xl'
-            artifactId "jiagu"
-            version rootProject.ext.versionName
+def RELEASE_REPOSITORY_URL = 'http://47.97.251.64:8081/repository/maven-releases/'
+def GROUP = 'com.xl'
+def NEXUS_USERNAME = 'admin'
+def NEXUS_PASSWORD = 'xiaolei521'
+def NEXUS_DESC = 'reinforce'
+def NEXUS_VERSION  ="1.0.16"
+
+
+afterEvaluate { project ->
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                pom.groupId = GROUP
+                pom.artifactId = NEXUS_DESC
+                pom.version = NEXUS_VERSION
+                repository(url: RELEASE_REPOSITORY_URL) {
+                    authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+                }
+            }
         }
     }
+
 }
+
 

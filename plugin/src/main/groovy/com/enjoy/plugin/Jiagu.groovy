@@ -10,6 +10,14 @@ class Jiagu {
     String vername
     String appname
 
+    String getMsg() {
+        return msg
+    }
+
+    void setMsg(String msg) {
+        this.msg = msg
+    }
+    String msg
     String getAppname() {
         return appname
     }
