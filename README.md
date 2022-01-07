@@ -73,3 +73,8 @@ signingConfigs {
 在插件任务中就可以选择需要加固的版本
 
 然后就可以从控制台看到加固和上传的信息，这样就解放了双手~
+
+有问题可以联系微信
+
+![WechatIMG237](https://user-images.githubusercontent.com/33646116/148474744-376affa5-0787-4658-b309-9a8a8c7acdba.jpeg)
+
